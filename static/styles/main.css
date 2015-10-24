@@ -1,0 +1,9 @@
+body {
+	margin-left:20px;
+}
+#input_cv {
+	margin-top:20px;
+	margin-bottom:20px;
+	height: 200px;
+	width:90%;
+}

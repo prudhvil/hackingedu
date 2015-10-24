@@ -21,16 +21,20 @@ var Main = (function() {
 	}
 
 	var compare = function() {
+		var cv = $('#input_cv').val();
+
 		function onSuccess(data) {
-			alert("success!");
+			console.log('success');
 			console.log(data);
 		}
 
 		function onFailure() {
-			alert("failure!");
+			console.log("failure!");
 		}
 
-		makePostRequest("calls/text/TextGetRankedKeywords?"+"apikey="+apiKey+"&text="+testText+"&outputMode=json",onSuccess,onFailure);
+		var url = "calls/text/TextGetRankedKeywords?"+"apikey="+apiKey+"&text="+cv+"&outputMode=json";
+		console.log(url);
+		makePostRequest(url,onSuccess,onFailure);
 	};
 
 	return {
