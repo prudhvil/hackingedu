@@ -55,6 +55,7 @@ textarea {
 
 .node>text {
     display:none;
+    pointer-events: none;
 }
 
 .grid7 .col-md-offset-1 { padding-left: 14.285714285714%; }
