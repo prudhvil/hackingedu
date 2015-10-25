@@ -11,6 +11,7 @@
     <script src="static/scripts/jsnetworkx.js"></script>
     <script src="static/scripts/queue.min.js"></script>
     <script src="static/scripts/jquery-ui/jquery-ui.js"></script>
+    <script src="static/scripts/Crypto.js"></script>
     <link rel="stylesheet" href="static/scripts/jquery-ui/jquery-ui.css">
 
     <script src="static/scripts/bootstrap/js/bootstrap.js"></script>
@@ -45,7 +46,8 @@
       </header>
       <div class="row">
         <div class="input_cv col-sm-offset-2 col-sm-3">
-          Input Cover Letter
+        	Input Cover Letter
+
         </div>
         <div class="input_company col-sm-offset-2 col-sm-3">
           Input Company Information
@@ -75,21 +77,20 @@
       </div>
 
       <div id="cv_bubble">
-        <div class="sentiment">
+        <div class="graphs" id="sentimentcv">
         </div>
 
-        <div class="tone">
+        <div class="graphs" id="tonecv">
         </div>
       </div>
 
       <div id="company_bubble">
-        <div class="sentiment">
+        <div class="graphs" id="sentimentcompany">
         </div>
 
-        <div class="tone">
+        <div class="graphs" id="tonecompany">
         </div>
       </div>
-
     </div>
 
   </body>

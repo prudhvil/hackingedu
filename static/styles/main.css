@@ -12,7 +12,7 @@ body {
     background-color: #ffffff;
 }
 #input_cv {
-    margin-top: 60px;
+    margin-top: 10px;
     margin-left: 14.15%;
     float: left;
     height: 350px;
@@ -20,11 +20,21 @@ body {
 }
 
 #input_company {
-    margin-top:60px;
+    margin-top:10px;
     margin-left: 5%;
     float: left;
     height: 350px;
     width: 33.33%;
+}
+
+.input_cv {
+    margin-top: 60px;
+    font-size: 150%;
+}
+
+.input_company {
+    margin-top:60px;
+    font-size: 150%;
 }
 
 #logo {
@@ -47,7 +57,7 @@ textarea {
 
 #second {
     display: block;
-    height: 600px;
+    height: 1000px;
     width: 100%;
 }
 
@@ -55,7 +65,7 @@ textarea {
     margin-top: 60px;
     margin-left: 14.15%;
     float: left;
-    height: 350px;
+    height: 600px;
     width: 33.33%;
 }
 
@@ -63,9 +73,17 @@ textarea {
     margin-top:60px;
     margin-left: 5%;
     float: left;
-    height: 350px;
+    height: 600px;
     width: 33.33%;
 }
+
+.graphs {
+    height: 300px;
+    border-style: solid;
+    border-color: #000000;
+}
+
+
 
 .node>text {
     display:none;
