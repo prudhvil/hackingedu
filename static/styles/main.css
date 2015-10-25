@@ -67,6 +67,8 @@ textarea {
     float: left;
     height: 600px;
     width: 33.33%;
+    border-style: solid;
+    border-color: #000000;
 }
 
 #company_bubble {
@@ -75,12 +77,12 @@ textarea {
     float: left;
     height: 600px;
     width: 33.33%;
+    border-style: solid;
+    border-color: #000000;
 }
 
 .graphs {
     height: 300px;
-    border-style: solid;
-    border-color: #000000;
 }
 
 
