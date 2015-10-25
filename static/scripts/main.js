@@ -65,7 +65,7 @@ var Main = (function() {
 			if (sent > 0) color = blues[Math.floor(sent*10)];
 			//if (sent < 0) color = 'rgb('+Math.round(-255*sent)+',0,0)';
 			if (sent < 0) color = reds[Math.floor(-sent*10)];
-			var radius = Math.abs(sent)*50;
+			var radius = k.relevance*25;
 			G.addNode(k.text,{'fill': color, 'radius': radius});
 		});
 
@@ -82,7 +82,7 @@ var Main = (function() {
 	                }
 	        },
 	        layoutAttr: {
-	        	'charge': -200,
+	        	'charge': -150,
 	        	'linkDistance': 40
 	        },
 	        labelStyle: {

@@ -55,6 +55,7 @@ textarea {
 
 .node>text {
     display:none;
+    pointer-events: none;
 }
 
 .input_cv {
