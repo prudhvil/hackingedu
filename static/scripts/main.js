@@ -1,8 +1,9 @@
 var Main = (function() {
-	var apiUrl = "http://gateway-a.watsonplatform.net/";
-	var apiKey = "2674ef0f4da9ec0b46042fe0f36e8a53e9742dcb";
-	var testText = "This is a test cover letter.";
+    var apiUrl = "http://gateway-a.watsonplatform.net/";
+    var apiKey = "2674ef0f4da9ec0b46042fe0f36e8a53e9742dcb";
+    var testText = "This is a test cover letter.";
 
+    var cv,jd,cvWords,jdWords;
 	var makePostRequest = function(url, onSuccess, onFailure) {
 	    $.ajax({
 	        type: 'POST',
@@ -14,36 +15,28 @@ var Main = (function() {
 	    });
 	};
 
-	var compareClickHandler = function(e) {
-		$("body").on("click", "#compare_button", function() {
-			compare();
-		});
-	}
+    var compareClickHandler = function(e) {
+        $("body").on("click", "#compare_button", function() {
+            compare();
+            cv_val = $("#input_cv").val();
+            company_val = $("#input_company").val();
+            $("div#second").removeClass('hidden');
+            $("div#first").addClass('hidden');
 
-	var compare = function() {
-		var cv = $('#input_cv').val();
+            $("div#idnavcontainer").append($( "#idvar" ));
+            $("div#idnavcontainer").append($( "#idsubmit" ));
+        });
+    }
 
-		function onSuccess(data) {
-			console.log('success');
-			keywords = data.keywords;
-			for (var i=0;i<keywords.length;i++) {
-				console.log("text: "+keywords[i].text + ", relevance: "+keywords[i].relevance);
-			}
-		}
-
-		function onFailure() {
-			console.log("failure!");
-		}
+    var compare = function() {
+        var cv = $('#input_cv').val();
 
 		var url = apiUrl + "calls/text/TextGetRankedKeywords?"+"apikey="+apiKey+"&text="+cv+"&outputMode=json";
-		console.log(url);
-		makePostRequest(url,onSuccess,onFailure);
 
 		save_cv(cv);
 	};
 
 	var save_cv = function(cv) {
-		console.log("save_cv called");
 		$.ajax({
 			type: 'POST',
 			url: '/save',

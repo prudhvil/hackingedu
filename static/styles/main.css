@@ -1,38 +1,34 @@
 @import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
 
 header {
-	display: block;
-	width: 100%;
-	text-align: center;
-	background-color: #ffffff;
+    display: block;
+    width: 100%;
+    text-align: center;
+    background-color: #ffffff;
 }
 
 body {
-	font-family: 'Montserrat', sans-serif;
-	background-color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #ffffff;
 }
 #input_cv {
-	display: block;
-	margin-top: 60px;
-	margin-bottom:20px;
-	margin-left: 14.15%;
-	float: left;
-	height: 350px;
-	width: 33.33%;
+    margin-top: 60px;
+    margin-left: 14.15%;
+    float: left;
+    height: 350px;
+    width: 33.33%;
 }
 
 #input_company {
-	display: block;
-	margin-top:60px;
-	margin-bottom:20px;
-	margin-left: 5%;
-	float: left;
-	height: 350px;
-	width: 33.33%;
+    margin-top:60px;
+    margin-left: 5%;
+    float: left;
+    height: 350px;
+    width: 33.33%;
 }
 
 #logo {
-	margin-top: 20px;
+    margin-top: 20px;
 }
 
 textarea {
@@ -40,8 +36,17 @@ textarea {
    background-color: #eeeeee;
 }
 
+.row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
 .btn-primary {
-	margin-top: 30px;
+    margin-top: 30px;
+}
+
+.hidden {
+    visibility: hidden;
 }
 
 .grid7 .col-md-offset-1 { padding-left: 14.285714285714%; }
