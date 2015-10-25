@@ -45,8 +45,10 @@ textarea {
     margin-top: 30px;
 }
 
-.hidden {
-    visibility: hidden;
+#second {
+    display: block;
+    height: 600px;
+    width: 100%;
 }
 
 #cv_bubble {
@@ -68,6 +70,11 @@ textarea {
 .node>text {
     display:none;
     pointer-events: none;
+}
+
+
+.nav_button {
+    font-size: 200%;
 }
 
 

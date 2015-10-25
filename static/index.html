@@ -23,6 +23,18 @@
       $(function() {
         Main.compareClickHandler();
       });
+
+      $(function() {
+        Main.backClickHandler();
+      });
+
+      $(function() {
+        Main.toneClickHandler();
+      });
+
+      $(function() {
+        Main.sentimentClickHandler();
+      });
     </script>
   </head>
 
@@ -42,18 +54,42 @@
       <textarea id="input_cv" placeholder="Input cover letter or resume"></textarea>
       <textarea id="input_company" placeholder="Input company description, job description, or other relevant information"></textarea>
       <div class="row">
-        <button type="button" class="col-sm-2 col-sm-offset-5 btn btn-primary" id="compare_button">Click me</button>
+        <button type="button" class="col-sm-2 col-sm-offset-5 btn btn-primary" id="compare_button">Analyze</button>
       </div>
     </div>
 
-    <div class="hidden second">
+    <div id="second">
+      <div class="row">
+        <button type="button" class="nav_button col-sm-1 btn btn" id="back_button">Back</button>
+        <button type="button" class="nav_button col-sm-3 col-sm-offset-2 btn" id="sentiment_button">Sentiment</button>
+        <button type="button" class="nav_button col-sm-3 col-sm-offset-1 btn" id="tone_button">Tone</button>
+      </div>
+
+      <div class="row">
+        <div class="input_cv col-sm-offset-2 col-sm-3">
+          Input Cover Letter
+        </div>
+        <div class="input_company col-sm-offset-2 col-sm-3">
+          Input Company Information
+        </div>
+      </div>
 
       <div id="cv_bubble">
+        <div class="sentiment">
+        </div>
+
+        <div class="tone">
+        </div>
       </div>
 
       <div id="company_bubble">
+        <div class="sentiment">
+        </div>
+
+        <div class="tone">
+        </div>
       </div>
-      
+
     </div>
 
   </body>

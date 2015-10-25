@@ -21,15 +21,36 @@ var Main = (function() {
 	};
 
     var compareClickHandler = function(e) {
+        $("div#second").hide();
+        $("div#company_bubble").hide();
         $("body").on("click", "#compare_button", function() {
             compare();
             cv_val = $("#input_cv").val();
             company_val = $("#input_company").val();
-            $("div.second").removeClass('hidden');
-            $("div#first").addClass('hidden');
+            $("div#second").show();
+            $("div#first").hide();
+        });
+    }
 
-            $("div#idnavcontainer").append($( "#idvar" ));
-            $("div#idnavcontainer").append($( "#idsubmit" ));
+    var backClickHandler = function(e) {
+        $("body").on("click", "#back_button", function() {
+            $("div#first").show();
+            $("div#second").hide();
+            $("")
+        });
+    }
+
+    var sentimentClickHandler = function(e) {
+        $("body").on("click", "#sentiment_button", function() {
+            $("div.sentiment").show();
+            $("div.tone").hide();
+        });
+    }
+
+    var toneClickHandler = function(e) {
+        $("body").on("click", "#tone_button", function() {
+            $("div.tone").show();
+            $("div.sentiment").hide();
         });
     }
 
@@ -115,6 +136,9 @@ var Main = (function() {
 
 	return {
 		compare: compare,
-		compareClickHandler: compareClickHandler
+		compareClickHandler: compareClickHandler,
+        backClickHandler: backClickHandler,
+        toneClickHandler: toneClickHandler,
+        sentimentClickHandler: sentimentClickHandler
 	};
 })();
