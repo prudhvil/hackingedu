@@ -49,6 +49,14 @@ textarea {
     visibility: hidden;
 }
 
+#second {
+    height: 600px;
+}
+
+.node>text {
+    display:none;
+}
+
 .grid7 .col-md-offset-1 { padding-left: 14.285714285714%; }
 .grid7 .col-md-offset-2 { padding-left: 28.571428571429%; }
 .grid7 .col-md-offset-3 { padding-left: 42.857142857143%; }
