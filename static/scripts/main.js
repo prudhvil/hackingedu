@@ -6,7 +6,7 @@ var Main = (function() {
 	var makePostRequest = function(url, onSuccess, onFailure) {
 	    $.ajax({
 	        type: 'POST',
-	        url: apiUrl + url,
+	        url: url,
 	        contentType: "application/x-www-form-urlencoded",
 	        dataType: "json",
 	        success: onSuccess,
@@ -25,17 +25,38 @@ var Main = (function() {
 
 		function onSuccess(data) {
 			console.log('success');
-			console.log(data);
+			keywords = data.keywords;
+			for (var i=0;i<keywords.length;i++) {
+				console.log("text: "+keywords[i].text + ", relevance: "+keywords[i].relevance);
+			}
 		}
 
 		function onFailure() {
 			console.log("failure!");
 		}
 
-		var url = "calls/text/TextGetRankedKeywords?"+"apikey="+apiKey+"&text="+cv+"&outputMode=json";
+		var url = apiUrl + "calls/text/TextGetRankedKeywords?"+"apikey="+apiKey+"&text="+cv+"&outputMode=json";
 		console.log(url);
 		makePostRequest(url,onSuccess,onFailure);
+
+		save_cv(cv);
 	};
+
+	var save_cv = function(cv) {
+		console.log("save_cv called");
+		$.ajax({
+			type: 'POST',
+			url: '/save',
+			contentType: 'application/json',
+			data: JSON.stringify({value: cv}),
+			success: function(result) {
+				console.log("cv successfully saved");
+			},
+			failure: function() {
+				console.log("cv save failed");
+			}
+		});
+	}
 
 	return {
 		compare: compare,
