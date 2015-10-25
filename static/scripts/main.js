@@ -25,7 +25,7 @@ var Main = (function() {
             compare();
             cv_val = $("#input_cv").val();
             company_val = $("#input_company").val();
-            $("div#second").removeClass('hidden');
+            $("div.second").removeClass('hidden');
             $("div#first").addClass('hidden');
 
             $("div#idnavcontainer").append($( "#idvar" ));
@@ -70,7 +70,7 @@ var Main = (function() {
 		});
 
 		jsnx.draw(G, {
-	        element: '#second',
+	        element: '#cv_bubble',
 	        weighted: false,
 	        withLabels: true,
 	        nodeStyle: {

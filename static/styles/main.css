@@ -49,8 +49,20 @@ textarea {
     visibility: hidden;
 }
 
-#second {
-    height: 600px;
+#cv_bubble {
+    margin-top: 60px;
+    margin-left: 14.15%;
+    float: left;
+    height: 350px;
+    width: 33.33%;
+}
+
+#company_bubble {
+    margin-top:60px;
+    margin-left: 5%;
+    float: left;
+    height: 350px;
+    width: 33.33%;
 }
 
 .node>text {
@@ -58,13 +70,6 @@ textarea {
     pointer-events: none;
 }
 
-.input_cv {
-
-}
-
-.input_company {
-    
-}
 
 .grid7 .col-md-offset-1 { padding-left: 14.285714285714%; }
 .grid7 .col-md-offset-2 { padding-left: 28.571428571429%; }
