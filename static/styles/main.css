@@ -4,31 +4,31 @@ header {
 	display: block;
 	width: 100%;
 	text-align: center;
-	background-color: #9A9D9E;
+	background-color: #ffffff;
 }
 
 body {
 	font-family: 'Montserrat', sans-serif;
-	background-color: #9A9D9E;
+	background-color: #ffffff;
 }
 #input_cv {
 	display: block;
-	margin-top:20px;
+	margin-top: 60px;
 	margin-bottom:20px;
-	margin-left: 4.76%;
+	margin-left: 14.15%;
 	float: left;
-	height: 500px;
-	width: 42.857142857143%;
+	height: 350px;
+	width: 33.33%;
 }
 
 #input_company {
 	display: block;
-	margin-top:20px;
+	margin-top:60px;
 	margin-bottom:20px;
-	margin-left: 4.76%;
+	margin-left: 5%;
 	float: left;
-	height: 500px;
-	width: 42.857142857143%;
+	height: 350px;
+	width: 33.33%;
 }
 
 #logo {
@@ -37,6 +37,11 @@ body {
 
 textarea {
    resize: none;
+   background-color: #eeeeee;
+}
+
+.btn-primary {
+	margin-top: 30px;
 }
 
 .grid7 .col-md-offset-1 { padding-left: 14.285714285714%; }
